@@ -1,16 +1,21 @@
 use std::fs;
 
+use util::readlines;
+
 fn main() {
     //// Q1 ////
     let contents = fs::read_to_string("input.txt")
         .expect("Could not read from file.");
-
     let mut bitlen: usize = 12;
     let mut ones_count: Vec<i32> = vec![0;bitlen];
     let mut zeros_count: Vec<i32> = vec![0;bitlen];
     let mut place = 0;
     let mut gamma: Vec<i32> = vec![0;bitlen];
     let mut epsilon: Vec<i32> = vec![0;bitlen];
+
+    // for (i, line) in contents.lines().enumerate() {
+    //
+    // }
 
     for line in contents.lines() {
         for c in line.chars() {
